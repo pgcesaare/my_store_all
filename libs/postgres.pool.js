@@ -11,6 +11,7 @@ if (config.isProd) {
   URI = config.dbUrl;
   options.connectionString = config.Url
   options.ssl = {
+    require: true,
     rejectUnauthorized: false
   }
 }
