@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 const { config } = require('./../config/config')
 
-let URI = '';
+//let URI = '';
 const options = {
     connectionString: URI,
 }
@@ -11,7 +11,6 @@ if (config.isProd) {
   URI = config.dbUrl;
   options.connectionString = config.Url
   options.ssl = {
-    require: true,
     rejectUnauthorized: false
   }
 }

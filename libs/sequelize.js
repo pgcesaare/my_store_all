@@ -1,9 +1,8 @@
 const { Sequelize } = require('sequelize');
 const { config } = require('./../config/config')
 const  setupModels  = require('./../db/models');
-const { required } = require('joi');
 
-let URI = '';
+//let URI = '';
 
 if (config.isProd) {
   URI = config.dbUrlProd;
@@ -20,7 +19,6 @@ const options = {
 if (config.isProd) {
     options.dialectOptions = {
         ssl: {
-            require: true,
             rejectUnauthorized: false
         }
     }
